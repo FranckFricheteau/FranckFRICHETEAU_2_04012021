@@ -1,4 +1,13 @@
+/*CODE COULEUR - CHARTE GRAPHIQUE */
+
+
+/* #9356DC - Primaire
+#FF79DA - Secondaire
+#99E2D0 - Tertiaire */
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+
+/*
 @keyframes itemAppear {
     0% {
         transform: scale(0)
@@ -7,8 +16,10 @@
         transform: scale(1)
     }
 }
+*/
 
 @keyframes loader {
+    /*charge puis affiche la page */
     to {
         opacity: 0;
         z-index: -10
@@ -16,6 +27,7 @@
 }
 
 @keyframes jump {
+    /*animation avec les 3 points colorés */
     0% {
         transform: translateY(0)
     }
@@ -50,7 +62,7 @@ html {
     z-index: 1000
 }
 
-.header__logo {
+.header__logo__food__title__main {
     font-family: Shrikhand, "cursive";
     margin: 0;
     text-align: center
@@ -66,37 +78,37 @@ html {
     padding: 1rem
 }
 
-.footer__logo {
+.footer__logo__food {
     color: #fff;
     font-family: Shrikhand, "cursive";
     font-size: 1.2rem;
     margin: 0 0 1rem
 }
 
-.footer__list {
+.footer__food__list {
     list-style: none;
     padding: 0;
     margin: 0
 }
 
-.footer__listElt {
+.footer__food__lists {
     margin: .5rem 0
 }
 
-.footer__listElt:first-child {
+.footer__food__lists:first-child {
     margin-top: 0
 }
 
-.footer__listElt:last-child {
+.footer__food__lists:last-child {
     margin-bottom: 0
 }
 
-.footer__link {
+.footer__nav__link {
     color: #fff;
     text-decoration: none
 }
 
-.footer__link:hover {
+.footer__nav__link:hover {
     text-decoration: underline
 }
 
@@ -159,10 +171,11 @@ html {
 }
 
 .location__icon {
-    margin-right: 1rem
+    margin-right: 2.3%;
+    margin-top: 2.3%;
 }
 
-.location__text {
+.title__second {
     font-weight: 700
 }
 
@@ -352,7 +365,7 @@ html {
     justify-content: center
 }
 
-.card {
+.card__like {
     background-color: #fff!important
 }
 
