@@ -28,12 +28,7 @@
     <title>Restaurant La note enchantée</title>
 
     <!--Feuilles de style CSS-->
-    <link rel="stylesheet " href="css/knacss.css ">
-    <link rel="stylesheet " href="css/knacss-full.css ">
-    <link rel="stylesheet " href="css/knacss-min.css ">
-    <link rel="stylesheet " href="css/structure.css ">
     <link rel="stylesheet " href="css/oh_my_food.css ">
-
 
     <!--Icone du site-->
     <link rel="icon" type="image/png" href="img/ohmyfood.png" />
@@ -41,31 +36,32 @@
 </head>
 
 <body>
-    <img class="picture" src="img/ohmyfood@2x.svg " alt="OH MY FOOD ">
-    <header class="restaurant__one">
+    <header class="header restaurant__one">
         <div class="restaurant__container">
-            <a href="./index.html"><i class="fas fa-arrow-left return__index"></i></a>
+            <a href="./index.html">
+                <i class="fas fa-arrow-left return__index"></i></a>
+            <h1 class="header__logo__food__title__main">Oh my Food</h1>
         </div>
     </header>
 
     <img src="./img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="La la-note-enchantee - Charonne" class="restaurant__img">
 
     <!--Menu principal de la palette du gout-->
-    <main class="menu__one">
+    <main class="menu container">
         <header class="menu__header">
             <h2 class="menu__title__second">La note enchantée</h2>
             <button class="menu__btn">
-                <i class="menu__like far fa-heart fa-2x"></i>
-        <i class="menu__like fas fa-heart fa-2x"></i>
+                <i class="menu__like menu__like--Bis far fa-heart fa-2x"></i>
+        <i class="menu__like menu__like--BisBis fas fa-heart fa-2x"></i>
             </button>
         </header>
 
         <!--Bloc qui contient Entrées + Plats + Desserts-->
-        <div class="sub__menus__one">
+        <div class="sub__menus__main">
             <!--Entrées-->
             <section class="sub__menu">
                 <h3 class="sub__menu__title__third">Entrées</h3>
-                <section class="menu__item__one">
+                <section class="menu__item item__one">
                     <header class="menu__item__header">
                         <h4 class="menu__item__title__fourth">Ravioles de foie gras</h4>
                         <p class="menu__item__paragraph">Accompagnés de leur crême à la truffe</p>
@@ -79,7 +75,7 @@
                     </div>
                 </section>
 
-                <section class="menu__item__two">
+                <section class="menu__item item__two">
                     <header class="menu__item__header">
                         <h4 class="menu__item__title__fourth">Caviar osciètre</h4>
                         <p class="menu__item__paragraph">Sur blini à la farine de blé noir</p>
@@ -93,7 +89,7 @@
                     </div>
                 </section>
 
-                <section class="menu__item__three">
+                <section class="menu__item item__three">
                     <header class="menu__item__header">
                         <h4 class="menu__item__title__fourth">Homar et espuma de...</h4>
                         <p class="menu__item__paragraph">Mariné aux zestes d'orange</p>
@@ -107,7 +103,7 @@
                     </div>
                 </section>
 
-                <section class="menu__item__four">
+                <section class="menu__item item__four">
                     <header class="menu__item__header">
                         <h4 class="menu__item__title__fourth">Foie gras de canard cuit entier</h4>
                         <p class="menu__item__paragraph">Confiture de figue et pain toasté</p>
@@ -125,7 +121,7 @@
             <!--Plats-->
             <section class="sub__menu">
                 <h3 class="sub__menu__title__third">Plats</h3>
-                <section class="menu__item__five">
+                <section class="menu__item item__five">
                     <header class="menu__item__header">
                         <h4 class="menu__item__title__fourth">Noix de coquilles Saint-Jacques</h4>
                         <p class="menu__item__paragraph">Sur lit de purée de celeri rave</p>
@@ -139,7 +135,7 @@
                     </div>
                 </section>
 
-                <section class="menu__item__six">
+                <section class="menu__item item__six">
                     <header class="menu__item__header">
                         <h4 class="menu__item__title__fourth">Langoustine poêlée</h4>
                         <p class="menu__item__paragraph">Purée de patate douce</p>
@@ -153,7 +149,7 @@
                     </div>
                 </section>
 
-                <section class="menu__item__seven">
+                <section class="menu__item item__seven">
                     <header class="menu__item__header">
                         <h4 class="menu__item__title__fourth">Mijoté de queue de boeuf</h4>
                         <p class="menu__item__paragraph">Et riz sauvage aux zestes de citron</p>
@@ -171,7 +167,7 @@
             <!--Desserts-->
             <section class="sub__menu">
                 <h3 class="sub__menu__title__third">Desserts</h3>
-                <section class="menu__item__height">
+                <section class="menu__item item__height">
                     <header class="menu__item__header">
                         <h4 class="menu__item__title__fourth">Macaron noisette et chocolat</h4>
                         <p class="menu__item__paragraph">Glace au caramel brun et sel de Guérande</p>
@@ -185,7 +181,7 @@
                     </div>
                 </section>
 
-                <section class="menu__item__nine">
+                <section class="menu__item item__nine">
                     <header class="menu__item__header">
                         <h4 class="menu__item__title__fourth">Baba au rhum revisité</h4>
                         <p class="menu__item__paragraph">Avec son coulis de citron</p>
@@ -199,7 +195,7 @@
                     </div>
                 </section>
 
-                <section class="menu__item__ten">
+                <section class="menu__item item__ten">
                     <header class="menu__item__header">
                         <h4 class="menu__item__title__fourth">Tarte au citron meringuée</h4>
                         <p class="menu__item__paragraph">Destructurée</p>
