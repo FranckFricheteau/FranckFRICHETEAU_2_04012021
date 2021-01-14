@@ -1,9 +1,31 @@
+/*https://developer.mozilla.org/fr/docs/Web */
+
+
+/*https://www.grafikart.fr/tutoriels/font-size-rem-em-px-477 */
+
+
 /*CODE COULEUR - CHARTE GRAPHIQUE */
 
 
 /* #9356DC - Primaire
 #FF79DA - Secondaire
 #99E2D0 - Tertiaire */
+
+
+/*1rem=16px */
+
+
+/*Unités mesures utilisées */
+
+
+/*px : unité de mesure absolue, n'est pas variant et on peut l'utiliser aisément pour définir la taille de nos différentes polices */
+
+
+/* % : unité relative qui permet de définir la taille de la police par rapport à la taille du parent */
+
+
+/* rem : une unité qui agit comme le em mais qui résoud le précédent prolème de l'héritage, ne se base pas sur l'élément parent pour obtenir sa taille mais sur l'élément racine
+1rem prendra sa valeur de la font-size du document (body ou html), comportement + prévisible que le em */
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 @keyframes itemAppear {
@@ -57,7 +79,7 @@ html {
     padding: 1rem;
     box-shadow: 0 0 .5rem rgba(0, 0, 0, .25);
     position: relative;
-    z-index: 1000
+    z-index: auto/* La propriété z-index définit le « z-order » d'un élément positionné et de ses éléments fils ou de ses éléments flexibles (les enfants d'un élément avec display: flex) */
 }
 
 .header__logo__food__title__main {
@@ -72,8 +94,10 @@ html {
 
 .footer .container {
     display: flex;
+    /*définit le type d'affichage utilisée pour le rendu d'un élément (de bloc ou en ligne) et la disposition utilisée pour ses éléments fils : grille ou boîtes flexibles */
     flex-direction: column;
-    padding: 1rem
+    /* La propriété flex-direction définit la façon dont les éléments flexibles sont placés dans un conteneur flexible : elle définit l'axe principal et la direction des éléments (normale ou inversée). */
+    padding: 18px
 }
 
 .footer__logo__food {
@@ -169,11 +193,11 @@ html {
 }
 
 .location__icon {
-    margin-right: 2.3%;
-    margin-top: 2.3%;
+    margin-right: 18px;
+    margin-top: 32px;
 }
 
-.title__second {
+.location__title__second {
     font-weight: 700
 }
 
@@ -231,7 +255,7 @@ html {
     counter-reset: compteListe
 }
 
-@media (min-width:64rem) {
+@media (min-width:1024px) {
     .operation__lists {
         display: flex
     }
@@ -247,7 +271,7 @@ html {
     position: relative
 }
 
-@media (min-width:64rem) {
+@media (min-width:1024px) {
     .operation__list {
         flex: 1;
         margin: 0 0 0 2rem
@@ -299,15 +323,15 @@ html {
     row-gap: 2rem
 }
 
-@media (min-width:64rem) {
+@media (min-width:1024px) {
     .cards {
-        grid-template-columns: repeat(2, 1fr)
+        grid-template-columns: repeat(2, 1fr)/* définit les noms des lignes et les fonctions de taille (track sizing) pour les colonnes de la grille */
     }
 }
 
 .card {
     background-color: #fff;
-    border-radius: 1rem;
+    border-radius: 16px;
     position: relative;
     text-decoration: none;
     color: inherit;
@@ -315,7 +339,7 @@ html {
 }
 
 .card__img {
-    height: 12rem;
+    height: 192px;
     width: 100%;
     border: 0 solid transparent;
     border-radius: 1rem 1rem 0 0;
@@ -326,11 +350,11 @@ html {
 .card__label {
     background-color: #99e2d0;
     color: #1b6150;
-    padding: .5rem;
-    border-radius: .125rem;
+    padding: 8px;
+    border-radius: 2px;
     position: absolute;
     top: 1rem;
-    right: .75rem
+    right: 12px
 }
 
 .card__footer {
@@ -353,8 +377,8 @@ html {
 }
 
 .card__btn {
-    height: 2rem;
-    width: 2rem;
+    height: 32px;
+    width: 32px;
     background-color: transparent;
     border: 0 solid transparent;
     padding: 0;
@@ -367,15 +391,18 @@ html {
     background-color: #fff!important
 }
 
-.restaurant__one {
+.restaurant__one,
+.restaurant__two,
+.restaurant__three,
+.restaurant__four {
     position: relative
 }
 
 .return__index {
     position: absolute;
-    left: 2rem;
-    height: 2rem;
-    width: 2rem;
+    left: 32px;
+    height: 32px;
+    width: 32px;
     top: 50%;
     display: flex;
     align-items: center;
@@ -387,13 +414,13 @@ html {
 
 .restaurant__img {
     max-width: 100%;
-    max-height: 32rem;
+    max-height: 512px;
     width: 100%;
     object-fit: cover
 }
 
 .menu {
-    margin-top: -4rem;
+    margin-top: -64px;
     border-radius: 2rem 2rem 0 0;
     background-color: #f6f6f6;
     z-index: 1;
@@ -412,8 +439,8 @@ html {
 }
 
 .menu__btn {
-    height: 2rem;
-    width: 2rem;
+    height: 32px;
+    width: 32px;
     background-color: transparent;
     border: 0 solid transparent;
     padding: 0;
@@ -462,30 +489,31 @@ html {
     display: grid/* dispose les items sur deux dimensions, rangées et colonnes */
 }
 
-@media (min-width:64rem) {
+@media (min-width:1024px) {
     .sub__menus__main {
         grid-template-columns: repeat(3, 1fr);
-        column-gap: 1rem
+        column-gap: 16px
     }
 }
 
 .sub__menus__main {
     max-width: 100%;
     overflow: hidden;
-    padding: 0 1rem
+    padding: 0 16px
 }
 
 .sub__menu__title__third {
     text-transform: uppercase;
     position: relative;
-    padding-bottom: .5rem;
+    padding-bottom: 8px;
     font-weight: 400
 }
 
 .sub__menu__title__third:after {
     content: "";
-    width: 3rem;
-    height: .25rem;
+    /* La propriété content est utilisée avec les pseudo-éléments ::before et ::after afin de générer le contenu d'un élément */
+    width: 48px;
+    height: 4px;
     background-color: #99e2d0;
     position: absolute;
     left: 0;
@@ -496,9 +524,9 @@ html {
     background-color: #fff;
     padding: 1rem;
     display: flex;
-    border-radius: .75rem;
-    margin: 1rem 0;
-    box-shadow: .25rem .25rem 1rem rgba(0, 0, 0, .1);
+    border-radius: 12px;
+    margin: 16px 0;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, .1);
     overflow: hidden;
     cursor: pointer;
     animation: itemAppear .6s;
@@ -535,13 +563,13 @@ html {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    padding-left: .5rem
+    padding-left: 8px
 }
 
 .menu__item__confirmation {
     background-color: #99e2d0;
     margin: -1rem -5rem -1rem 1rem;
-    width: 4rem;
+    width: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -553,8 +581,8 @@ html {
 }
 
 .menu__item__wrap__icon {
-    height: 1.6rem;
-    width: 1.6rem;
+    height: 25.6px;
+    width: 25.6px;
     background-color: #fff;
     display: flex;
     align-items: center;
