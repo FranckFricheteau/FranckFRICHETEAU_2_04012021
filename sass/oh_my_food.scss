@@ -1,0 +1,649 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+@keyframes itemAppear {
+    /* animation progressive des items sur entrées + plats + desserts de chaques restaurants */
+    0% {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes loader {
+    /*charge puis affiche la page */
+    to {
+        opacity: 0;
+        z-index: -10;
+    }
+}
+
+@keyframes jump {
+    /*animation avec les 3 points colorés */
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(0.5rem);
+    }
+    75% {
+        transform: translateY(-0.5rem);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+body,
+html {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+    position: relative;
+}
+
+.header {
+    padding: 1rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+    position: relative;
+    z-index: auto;
+}
+
+.header__logo__food__title__main {
+    font-family: Shrikhand, "cursive";
+    margin: 0;
+    text-align: center;
+}
+
+.footer {
+    background-color: #353535;
+    .container {
+        display: flex;
+        /*définit le type d'affichage utilisée pour le rendu d'un élément (de bloc ou en ligne) et la disposition utilisée pour ses éléments fils : grille ou boîtes flexibles */
+        flex-direction: column;
+        /* La propriété flex-direction définit la façon dont les éléments flexibles sont placés dans un conteneur flexible : elle définit l'axe principal et la direction des éléments (normale ou inversée). */
+        padding: 18px;
+    }
+}
+
+.footer__logo__food {
+    color: #fff;
+    font-family: Shrikhand, "cursive";
+    font-size: 1.2rem;
+    margin: 0 0 1rem;
+}
+
+.footer__food__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer__food__lists {
+    margin: 0.5rem 0;
+    &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.footer__nav__link {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.footer__icon {
+    width: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+.header__main {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: hsla(0, 0%, 100%, 0.9);
+    animation: loader .01s;
+    /* permet d'accéder à la page après chargement */
+    animation-delay: 1.75s;
+    /* permet d'avoir l'animation avec les 3 points colorés */
+    animation-fill-mode: both;
+    /* permet d'accéder à la page après chargement */
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__two {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 1rem;
+    animation: jump 1s;
+    /* permet d'avoir le saut des 3 points colorés */
+    animation-iteration-count: 1;
+}
+
+.header__two__Container {
+    display: flex;
+    width: 5rem;
+    justify-content: space-between;
+}
+
+.header__item--1 {
+    background-color: #9356dc;
+}
+
+.header__item--2 {
+    background-color: #ff79da;
+    animation-delay: 0.25s;
+}
+
+.header__item--3 {
+    background-color: #99e2d0;
+    animation-delay: 0.5s;
+}
+
+.location {
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem 1rem;
+    background-color: #f3f3f3;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.location__icon {
+    margin-right: 18px;
+    margin-top: 32px;
+}
+
+.location__title__second {
+    font-weight: 700;
+}
+
+.booking {
+    padding: 2rem;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.booking__title__second {
+    margin: 0;
+}
+
+.booking__paragraph {
+    font-weight: 300;
+    margin: 1.5rem 0;
+}
+
+.booking__btn {
+    border: 0;
+    padding: .75rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    color: #fff;
+    background-color: #686868;
+    background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+    /* dégradé de couleurs sur le bouton "explorer nos restaurants */
+    cursor: pointer;
+    transition-duration: .25s;
+    /* définit le nombre de secondes ou de millisecondes que doit durer une animation */
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+    &:hover {
+        background-color: #fff;
+        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+.operation {
+    padding: 2rem 1rem;
+}
+
+.operation__title__second {
+    margin-top: 0;
+}
+
+.operation__lists {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: compteListe;
+}
+
+@media (min-width: 1024px) {
+    .operation__lists {
+        display: flex;
+    }
+}
+
+.operation__list {
+    padding: 1.5rem;
+    margin: 1rem 0 1rem .75rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.125);
+    border-radius: 1.25rem;
+    background-color: #f6f6f6;
+    display: flex;
+    position: relative;
+    &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &:before {
+        counter-increment: compteListe 1;
+        /* donne un numéro à chaque item dans l'ordre, commence à 1 */
+        content: counter(compteListe) " ";
+        /*compte les items */
+        background: #9356dc;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        position: absolute;
+        left: -0.75rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .operation__list {
+        flex: 1;
+        margin: 0 0 0 2rem;
+        &:first-child {
+            margin-left: 0.75rem;
+        }
+    }
+}
+
+.operation__icon {
+    margin-right: 1rem;
+    color: #7e7e7e;
+}
+
+.restaurants {
+    background-color: #f6f6f6;
+    padding: 2rem 1rem;
+}
+
+.cards {
+    display: grid;
+    /* définit la disposition utilisée pour ses éléments fils: grille */
+    grid-template-columns: repeat(1, 1fr);
+    /* définit les noms des lignes et les fonctions de taille (track sizing) pour les colonnes de la grille */
+    column-gap: 2rem;
+    /* permet de définir l'espace entre les colonnes d'un élément */
+    row-gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 16px;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card__img {
+    height: 192px;
+    width: 100%;
+    border: 0 solid transparent;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: none;
+    object-fit: cover;
+}
+
+.card__label {
+    background-color: #99e2d0;
+    color: #1b6150;
+    padding: 8px;
+    border-radius: 2px;
+    position: absolute;
+    top: 1rem;
+    right: 12px;
+}
+
+.card__footer {
+    padding: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.card__content {
+    flex: 1;
+}
+
+.card__title__third {
+    margin: 0 0 0.25rem;
+}
+
+.card__subtitle {
+    margin: 0;
+}
+
+.card__btn {
+    height: 32px;
+    width: 32px;
+    background-color: transparent;
+    border: 0 solid transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__like {
+    background-color: #fff !important;
+}
+
+.restaurant__one,
+.restaurant__two,
+.restaurant__three,
+.restaurant__four {
+    position: relative;
+}
+
+.return__index {
+    position: absolute;
+    left: 32px;
+    height: 32px;
+    width: 32px;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    /* permet de déplacer un élément sur le plan représenté par le document, à l'aide d'un vecteur dont les coordonnées définissent la quantité de déplacement sur chaque axe (horizontal et vertical) */
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.restaurant__img {
+    max-width: 100%;
+    max-height: 512px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.menu {
+    margin-top: -64px;
+    border-radius: 2rem 2rem 0 0;
+    background-color: #f6f6f6;
+    z-index: 1;
+    position: relative;
+}
+
+.menu__header {
+    padding: 1rem 2rem 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu__title__second {
+    font-family: Shrikhand, "cursive";
+}
+
+.menu__btn {
+    height: 32px;
+    width: 32px;
+    background-color: transparent;
+    border: 0 solid transparent;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    background-color: #000;
+    &:hover:before {
+        opacity: 1;
+    }
+    &:before {
+        /*  utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS */
+        opacity: 0;
+        transition: .5s;
+        /* permet de contrôler la vitesse d'animation, étalé sur une durée, 0.5 seconde */
+        content: "";
+        /*  utilisée avec les pseudo-éléments ::before et ::after afin de générer le contenu d'un élément. */
+        background: linear-gradient(0deg, #9356dc, #ff79da);
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.menu__like {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition-duration: .25s;
+    background-color: #f6f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    mix-blend-mode: lighten;
+}
+
+.menu__btn:hover .menu__like--Bis {
+    opacity: 0;
+}
+
+.sub__menus__main {
+    display: grid;
+    max-width: 100%;
+    overflow: hidden;
+    /* définit comment gérer le dépassement du contenu d'un élément dans son bloc, définit valeurs et propriétés */
+    padding: 0 16px;
+}
+
+@media (min-width: 1024px) {
+    .sub__menus__main {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 16px;
+    }
+}
+
+.sub__menu__title__third {
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 8px;
+    font-weight: 400;
+    &:after {
+        content: "";
+        /* La propriété content est utilisée avec les pseudo-éléments ::before et ::after afin de générer le contenu d'un élément */
+        width: 48px;
+        height: 4px;
+        background-color: #99e2d0;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+.menu__item {
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    border-radius: 12px;
+    margin: 16px 0;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    animation: itemAppear .6s;
+    /* permet d'afficher les items d'entrées + plats + desserts en animation sur 0.6 seconde */
+    animation-timing-function: cubic-bezier(0.5, 1.58, 0.34, 0.82);
+    /* définit la façon dont une animation doit se dérouler au fur et à mesure de chaque cycle, ici item par item de façon progressive */
+    animation-fill-mode: both;
+    transform: scale(0);
+    max-width: 100%;
+}
+
+.menu__item__header {
+    flex: 1;
+    white-space: nowrap;
+    /* utilisée pour décrire la façon dont les blancs sont gérés au sein de l'élément. Les blancs sont regroupés comme avec normal mais les passages à la ligne automatiques sont supprimés */
+    text-overflow: ellipsis;
+    /*  définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé pour les utilisateurs, affiche une ellipse '...' pour afficher un texte rogné */
+    overflow: hidden;
+}
+
+.menu__item__title__fourth {
+    white-space: nowrap;
+    /* utilisée pour décrire la façon dont les blancs sont gérés au sein de l'élément. Les blancs sont regroupés comme avec normal mais les passages à la ligne automatiques sont supprimés */
+    text-overflow: ellipsis;
+    /*  définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé pour les utilisateurs, affiche une ellipse '...' pour afficher un texte rogné */
+    overflow: hidden;
+    margin: 0;
+}
+
+.menu__item__paragraph {
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.menu__item__price {
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+    /* les éléments sont regroupés vers la fin du conteneur, selon l'axe principal et le sens du conteneur flexible. */
+    align-items: flex-end;
+    /*Le bord de la marge des éléments flexibles sur l'axe en bloc est aligné avec le bord de la ligne à la fin de l'axe en bloc*/
+    padding-left: 8px;
+}
+
+.menu__item__confirmation {
+    background-color: #99e2d0;
+    margin: -1rem -5rem -1rem 1rem;
+    width: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.5s;
+}
+
+.menu__item:hover .menu__item__confirmation {
+    margin-right: -1rem;
+}
+
+.menu__item__wrap__icon {
+    height: 25.6px;
+    width: 25.6px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    transform: rotate(180deg);
+    /* définit une transformation qui déplace un élément autour d'un point fixe,rotation de l'icon sur 180 degrès */
+    transition-duration: 0.5s;
+}
+
+.menu__item:hover .menu__item__wrap__icon {
+    transform: rotate(0);
+}
+
+.menu__item__icon {
+    color: #99e2d0;
+}
+
+.item__one {
+    animation-delay: 0s;
+}
+
+.item__two {
+    animation-delay: 0.1s;
+}
+
+.item__three {
+    animation-delay: 0.2s;
+}
+
+.item__four {
+    animation-delay: 0.3s;
+}
+
+.item__five {
+    animation-delay: 0.4s;
+}
+
+.item__six {
+    animation-delay: 0.5s;
+}
+
+.item__seven {
+    animation-delay: 0.6s;
+}
+
+.item__height {
+    animation-delay: 0.7s;
+}
+
+.item__nine {
+    animation-delay: 0.8s;
+}
+
+.item__ten {
+    animation-delay: 0.9s;
+}
+
+.wrap__btn {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.command__btn {
+    border: 0;
+    padding: .75rem 1.5rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 100px;
+    color: #fff;
+    background-color: #686868;
+    background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+    transition-duration: .25s;
+    box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    &:hover {
+        background-color: #fff;
+        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+}
