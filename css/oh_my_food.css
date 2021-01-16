@@ -29,7 +29,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
 @keyframes itemAppear {
-    /* animation progressive sur entrées + plats + desserts de chaques restaurants */
+    /* animation progressive des items sur entrées + plats + desserts de chaques restaurants */
     0% {
         transform: scale(0)
     }
@@ -66,7 +66,7 @@ body,
 html {
     margin: 0;
     font-family: Roboto, sans-serif;
-    scroll-behavior: smooth
+    scroll-behavior: smooth/* défilement doux */
 }
 
 .container {
@@ -147,8 +147,11 @@ html {
     top: 0;
     background-color: hsla(0, 0%, 100%, .9);
     animation: loader .01s;
+    /* permet d'accéder à la page après chargement */
     animation-delay: 1.75s;
+    /* permet d'avoir l'animation avec les 3 points colorés */
     animation-fill-mode: both;
+    /* permet d'accéder à la page après chargement */
     z-index: 10000;
     display: flex;
     align-items: center;
@@ -160,7 +163,8 @@ html {
     width: 1rem;
     border-radius: 1rem;
     animation: jump 1s;
-    animation-iteration-count: 1
+    /* permet d'avoir le saut des 3 points colorés */
+    animation-iteration-count: 1/* indique le nombre de cycles utilisés pour répéter une animation avant que celle-ci s'arrête */
 }
 
 .header__two__Container {
@@ -175,12 +179,12 @@ html {
 
 .header__item--2 {
     background-color: #ff79da;
-    animation-delay: .25s
+    animation-delay: .25s/*saut de l'item 2 sur 0.25 seconde */
 }
 
 .header__item--3 {
     background-color: #99e2d0;
-    animation-delay: .5s
+    animation-delay: .5s/* saut de l'item 3 sur 0.5 seconde */
 }
 
 .location {
@@ -225,8 +229,10 @@ html {
     color: #fff;
     background-color: #686868;
     background-image: linear-gradient(0deg, rgba(147, 86, 220, .9), rgba(255, 121, 218, .9));
+    /* dégradé de couleurs sur le bouton "explorer nos restaurants */
     cursor: pointer;
     transition-duration: .25s;
+    /* définit le nombre de secondes ou de millisecondes que doit durer une animation */
     box-shadow: .25rem .25rem 10px rgba(0, 0, 0, .25)
 }
 
@@ -252,7 +258,7 @@ html {
     margin: 0;
     padding: 0;
     list-style: none;
-    counter-reset: compteListe
+    counter-reset: compteListe/* permet de réinitialiser un compteur CSS avec une valeur donnée. */
 }
 
 @media (min-width:1024px) {
@@ -318,14 +324,17 @@ html {
 
 .cards {
     display: grid;
+    /* définit la disposition utilisée pour ses éléments fils: grille */
     grid-template-columns: repeat(1, 1fr);
+    /* définit les noms des lignes et les fonctions de taille (track sizing) pour les colonnes de la grille */
     column-gap: 2rem;
-    row-gap: 2rem
+    /* permet de définir l'espace entre les colonnes d'un élément */
+    row-gap: 2rem/* définit la taille des gouttières entre les lignes d'un élément */
 }
 
 @media (min-width:1024px) {
     .cards {
-        grid-template-columns: repeat(2, 1fr)/* définit les noms des lignes et les fonctions de taille (track sizing) pour les colonnes de la grille */
+        grid-template-columns: repeat(2, 1fr)
     }
 }
 
@@ -344,7 +353,7 @@ html {
     border: 0 solid transparent;
     border-radius: 1rem 1rem 0 0;
     box-shadow: none;
-    object-fit: cover
+    object-fit: cover/* Le contenu remplacé est dimensionné pour maintenir son ratio d'affichage tout en remplissant toute la boîte de contenu */
 }
 
 .card__label {
@@ -408,6 +417,7 @@ html {
     align-items: center;
     justify-content: center;
     transform: translateY(-50%);
+    /* permet de déplacer un élément sur le plan représenté par le document, à l'aide d'un vecteur dont les coordonnées définissent la quantité de déplacement sur chaque axe (horizontal et vertical) */
     font-size: 1.2rem;
     color: #000
 }
@@ -457,9 +467,12 @@ html {
 }
 
 .menu__btn:before {
+    /*  utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS */
     opacity: 0;
     transition: .5s;
+    /* permet de contrôler la vitesse d'animation, étalé sur une durée, 0.5 seconde */
     content: "";
+    /*  utilisée avec les pseudo-éléments ::before et ::after afin de générer le contenu d'un élément. */
     background: linear-gradient(0deg, #9356dc, #ff79da)
 }
 
@@ -478,7 +491,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    mix-blend-mode: lighten
+    mix-blend-mode: lighten/* définit la façon dont le contenu d'un élément doit se mélanger avec le contenu de l'élément parent et avec son arrière-plan */
 }
 
 .menu__btn:hover .menu__like--Bis {
@@ -499,6 +512,7 @@ html {
 .sub__menus__main {
     max-width: 100%;
     overflow: hidden;
+    /* définit comment gérer le dépassement du contenu d'un élément dans son bloc, définit valeurs et propriétés */
     padding: 0 16px
 }
 
@@ -530,7 +544,9 @@ html {
     overflow: hidden;
     cursor: pointer;
     animation: itemAppear .6s;
+    /* permet d'afficher les items d'entrées + plats + desserts en animation sur 0.6 seconde */
     animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
+    /* définit la façon dont une animation doit se dérouler au fur et à mesure de chaque cycle, ici item par item de façon progressive */
     animation-fill-mode: both;
     transform: scale(0);
     max-width: 100%
@@ -543,7 +559,9 @@ html {
 .menu__item__header,
 .menu__item__title__fourth {
     white-space: nowrap;
+    /* utilisée pour décrire la façon dont les blancs sont gérés au sein de l'élément. Les blancs sont regroupés comme avec normal mais les passages à la ligne automatiques sont supprimés */
     text-overflow: ellipsis;
+    /*  définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé pour les utilisateurs, affiche une ellipse '...' pour afficher un texte rogné */
     overflow: hidden
 }
 
@@ -562,7 +580,9 @@ html {
     font-weight: 700;
     display: flex;
     justify-content: flex-end;
+    /* les éléments sont regroupés vers la fin du conteneur, selon l'axe principal et le sens du conteneur flexible. */
     align-items: flex-end;
+    /*Le bord de la marge des éléments flexibles sur l'axe en bloc est aligné avec le bord de la ligne à la fin de l'axe en bloc*/
     padding-left: 8px
 }
 
@@ -589,7 +609,8 @@ html {
     justify-content: center;
     border-radius: 100px;
     transform: rotate(180deg);
-    transition-duration: .5s
+    /* définit une transformation qui déplace un élément autour d'un point fixe,rotation de l'icon sur 180 degrès */
+    transition-duration: .5s/* rotation sur 0.5 seconde */
 }
 
 .menu__item:hover .menu__item__wrap__icon {
@@ -601,7 +622,7 @@ html {
 }
 
 .item__one {
-    animation-delay: 0s
+    animation-delay: 0s/*  définit la durée d'attente avant de démarrer une animation une fois qu'elle a été appliquée à un élément */
 }
 
 .item__two {
