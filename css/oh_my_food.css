@@ -62,11 +62,13 @@
     }
 }
 
-body,
 html {
+    scroll-behavior: smooth/* défilement doux */
+}
+
+body {
     margin: 0;
     font-family: Roboto, sans-serif;
-    scroll-behavior: smooth/* défilement doux */
 }
 
 .container {
@@ -190,9 +192,9 @@ html {
 .location {
     display: flex;
     justify-content: center;
-    padding: 1.25rem 1rem;
+    padding: 16 px 16 px;
     background-color: #f3f3f3;
-    font-size: 1.2rem;
+    font-size: 16px;
     position: relative
 }
 
@@ -202,7 +204,8 @@ html {
 }
 
 .location__title__second {
-    font-weight: 700
+    font-weight: 400;
+    font-size: 27px
 }
 
 .booking {
@@ -268,7 +271,7 @@ html {
 }
 
 .operation__list {
-    padding: 1.5rem;
+    padding: 24px;
     margin: 1rem 0 1rem .75rem;
     box-shadow: .25rem .25rem .5rem rgba(0, 0, 0, .125);
     border-radius: 1.25rem;
@@ -315,6 +318,10 @@ html {
 .operation__icon {
     margin-right: 1rem;
     color: #7e7e7e
+}
+
+.operation__icon__Icon {
+    color: #9356DC
 }
 
 .restaurants {
@@ -572,8 +579,11 @@ html {
 .menu__item__paragraph {
     margin: 0;
     white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden
+}
+
+.menu__item__paragraph:hover {
+    overflow: hidden;
+    text-overflow: ellipsis
 }
 
 .menu__item__price {
