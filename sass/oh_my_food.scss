@@ -150,20 +150,22 @@ body {
 .location {
     display: flex;
     justify-content: center;
-    padding: 16 px 16 px;
+    padding: 1rem 1rem;
     background-color: #f3f3f3;
-    font-size: 16px;
+    font-size: 1.2rem;
     position: relative
 }
 
 .location__icon {
-    margin-right: 18px;
-    margin-top: 32px;
+    margin-top: 15px;
+    margin-right: 1rem;
 }
 
 .location__title__second {
-    font-weight: 400;
-    font-size: 27px
+    font-weight: bold;
+    font-size: 19px;
+    color: black;
+    font-weight: 700;
 }
 
 .booking {
