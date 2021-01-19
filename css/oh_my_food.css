@@ -515,7 +515,7 @@ body {
     }
 }
 
-.sub__menus__main {
+.sub__menu {
     max-width: 100%;
     overflow: hidden;
     /* définit comment gérer le dépassement du contenu d'un élément dans son bloc, définit valeurs et propriétés */
@@ -578,11 +578,8 @@ body {
 .menu__item__paragraph {
     margin: 0;
     white-space: nowrap;
-}
-
-.menu__item__paragraph:hover {
-    overflow: hidden;
-    text-overflow: ellipsis
+    text-overflow: ellipsis;
+    overflow: hidden
 }
 
 .menu__item__price {
