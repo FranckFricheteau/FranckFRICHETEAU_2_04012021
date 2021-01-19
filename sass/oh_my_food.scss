@@ -496,26 +496,25 @@ body {
 
 .menu__item__header {
     flex: 1;
+}
+
+.menu__item__header .menu__item__title__fourth {
     white-space: nowrap;
+    /* utilisée pour décrire la façon dont les blancs sont gérés au sein de l'élément. Les blancs sont regroupés comme avec normal mais les passages à la ligne automatiques sont supprimés */
     text-overflow: ellipsis;
-    overflow: hidden;
+    /*  définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé pour les utilisateurs, affiche une ellipse '...' pour afficher un texte rogné */
+    overflow: hidden
 }
 
 .menu__item__title__fourth {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
     margin: 0;
 }
 
 .menu__item__paragraph {
     margin: 0;
     white-space: nowrap;
-}
-
-.menu__item__paragraph:hover {
     text-overflow: ellipsis;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .menu__item__price {
