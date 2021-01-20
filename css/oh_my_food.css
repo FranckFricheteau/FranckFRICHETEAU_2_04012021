@@ -63,7 +63,10 @@
 }
 
 html {
-    scroll-behavior: smooth/* défilement doux */
+    scroll-behavior: smooth;
+    /* défilement doux */
+    margin: 0;
+    font-family: Roboto, sans-serif
 }
 
 body {
@@ -192,7 +195,7 @@ body {
 .location {
     display: flex;
     justify-content: center;
-    padding: 1rem 1rem;
+    padding: 0.4rem 1rem;
     background-color: #f3f3f3;
     font-size: 1.2rem;
     position: relative
@@ -320,6 +323,7 @@ body {
 }
 
 .operation__icon__Icon {
+    margin-right: 1rem;
     color: #9356DC
 }
 
@@ -335,7 +339,7 @@ body {
     /* définit les noms des lignes et les fonctions de taille (track sizing) pour les colonnes de la grille */
     column-gap: 2rem;
     /* permet de définir l'espace entre les colonnes d'un élément */
-    row-gap: 2rem/* définit la taille des gouttières entre les lignes d'un élément */
+    row-gap: 1.5rem/* définit la taille des gouttières entre les lignes d'un élément */
 }
 
 @media (min-width:1024px) {
