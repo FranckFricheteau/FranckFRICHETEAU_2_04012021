@@ -247,6 +247,10 @@ body {
     color: inherit
 }
 
+.booking__btn a {
+    background-color: #fff;
+}
+
 .booking__btn:hover {
     background-color: #fff;
     box-shadow: .25rem .25rem 10px rgba(0, 0, 0, .5)
