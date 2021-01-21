@@ -196,7 +196,8 @@ body {
     display: flex;
     justify-content: center;
     padding: 0.4rem 1rem;
-    background-color: #f3f3f3;
+    background: linear-gradient(#D3D3D3, #f3f3f3);
+    /* dégradé linéaire */
     font-size: 1.2rem;
     position: relative
 }
@@ -216,7 +217,7 @@ body {
 .booking {
     padding: 2rem;
     text-align: center;
-    background-color: #fafafa
+    background-color: #f3f3f3
 }
 
 .booking__title__second {
