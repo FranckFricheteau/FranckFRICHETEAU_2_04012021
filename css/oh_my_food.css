@@ -343,7 +343,7 @@ body {
     /* définit les noms des lignes et les fonctions de taille (track sizing) pour les colonnes de la grille */
     column-gap: 2rem;
     /* permet de définir l'espace entre les colonnes d'un élément */
-    row-gap: 1.5rem/* définit la taille des gouttières entre les lignes d'un élément */
+    row-gap: 1.25rem/* définit la taille des gouttières entre les lignes d'un élément */
 }
 
 @media (min-width:1024px) {
