@@ -286,6 +286,10 @@ body {
     position: relative
 }
 
+.operation__list:hover {
+    box-shadow: .25rem .25rem .5rem rgba(0, 0, 0, .5);
+}
+
 @media (min-width:1024px) {
     .operation__list {
         flex: 1;
