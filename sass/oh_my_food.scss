@@ -32,9 +32,8 @@
 
 html {
     scroll-behavior: smooth;
-    /* défilement doux */
     margin: 0;
-    font-family: Roboto, sans-serif
+    font-family: Roboto, sans-serif;
 }
 
 body {
@@ -155,8 +154,9 @@ body {
     justify-content: center;
     padding: 0.4rem 1rem;
     background: linear-gradient(#D3D3D3, #f3f3f3);
+    /* dégradé linéaire */
     font-size: 1.2rem;
-    position: relative
+    position: relative;
 }
 
 .location__icon {
@@ -198,13 +198,13 @@ body {
     cursor: pointer;
     transition-duration: .25s;
     box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+    a {
+        color: #fff;
+    }
     &:hover {
         background-color: #fff;
         box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
-    }
-    a {
-        color: #fff;
-        text-decoration: none;
     }
 }
 
@@ -237,14 +237,14 @@ body {
     background-color: #f6f6f6;
     display: flex;
     position: relative;
+    &:hover {
+        box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
+    }
     &:first-child {
         margin-top: 0;
     }
     &:last-child {
         margin-bottom: 0;
-    }
-    &:hover {
-        box-shadow: .25rem .25rem .5rem rgba(0, 0, 0, .5);
     }
     &:before {
         counter-increment: compteListe 1;
@@ -279,7 +279,7 @@ body {
 
 .operation__icon__Icon {
     margin-right: 1rem;
-    color: #9356DC
+    color: #9356DC;
 }
 
 .restaurants {
@@ -469,8 +469,7 @@ body {
 .sub__menu {
     max-width: 100%;
     overflow: hidden;
-    /* définit comment gérer le dépassement du contenu d'un élément dans son bloc, définit valeurs et propriétés */
-    padding: 0 16px
+    padding: 0 16px;
 }
 
 .sub__menu__title__third {
@@ -507,17 +506,15 @@ body {
 
 .menu__item__header {
     flex: 1;
-}
-
-.menu__item__header .menu__item__title__fourth {
     white-space: nowrap;
-    /* utilisée pour décrire la façon dont les blancs sont gérés au sein de l'élément. Les blancs sont regroupés comme avec normal mais les passages à la ligne automatiques sont supprimés */
     text-overflow: ellipsis;
-    /*  définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé pour les utilisateurs, affiche une ellipse '...' pour afficher un texte rogné */
-    overflow: hidden
+    overflow: hidden;
 }
 
 .menu__item__title__fourth {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     margin: 0;
 }
 
@@ -525,7 +522,7 @@ body {
     margin: 0;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .menu__item__price {
