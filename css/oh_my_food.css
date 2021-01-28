@@ -288,6 +288,7 @@ body {
 
 .operation__list:hover {
     box-shadow: .25rem .25rem .5rem rgba(0, 0, 0, .5);
+    transition-duration: .25s;
 }
 
 @media (min-width:1024px) {
