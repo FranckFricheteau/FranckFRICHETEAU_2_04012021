@@ -255,6 +255,9 @@ body {
     box-shadow: .25rem .25rem 10px rgba(0, 0, 0, .5)
 }
 
+
+/*Fonctionnement */
+
 .operation {
     padding: 2rem 1rem
 }
@@ -335,6 +338,9 @@ body {
     margin-right: 1rem;
     color: #9356DC
 }
+
+
+/*Restaurants */
 
 .restaurants {
     background-color: #f6f6f6;
@@ -419,12 +425,18 @@ body {
     background-color: #fff!important
 }
 
+
+/* Entête des 4 restaurants */
+
 .restaurant__one,
 .restaurant__two,
 .restaurant__three,
 .restaurant__four {
     position: relative
 }
+
+
+/*bouton retour */
 
 .return__index {
     position: absolute;
